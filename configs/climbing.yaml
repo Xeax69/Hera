@@ -1,0 +1,6 @@
+model:
+name: baseline
+version: "0.0.1"
+path: apps/api/models/climbing/0.0.1/ # emplacement prévu des artefacts
+thresholds:
+min_score: 0.6

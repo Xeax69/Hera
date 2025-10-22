@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+title: HERA API
+version: 0.1.0
+paths:
+/health:
+get:
+responses:
+'200':
+description: OK
+/predict/climbing/v1:
+post:
+requestBody:
+required: true
+content:
+application/json:
+schema:
+$ref: '#/components/schemas/ClimbingFeatures'
+responses:
+'200':
+description: OK
+content:
+application/json:
+schema:
+$ref: '#/components/schemas/ClimbingPrediction'
+components:
+schemas:
+ClimbingFeatures:
+type: object
+required: [hang_time_s, route_grade]
+properties:
+age: { type: number }
+weight: { type: number }
+hang_time_s: { type: number }
+route_grade: { type: string, example: "6b+" }
+ClimbingPrediction:
+type: object
+properties:
+performance_score: { type: number, example: 0.72 }
+advice: { type: string }
+model_version: { type: string, example: "1.0.0" }
