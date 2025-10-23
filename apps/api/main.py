@@ -21,6 +21,8 @@ class ClimbingPrediction(BaseModel):
 def health():
     return {"status": "ok"}
 
+a = 2
+print(a)
 
 @app.post("/predict/climbing/v1", response_model=ClimbingPrediction)
 def predict(payload: ClimbingFeatures):
