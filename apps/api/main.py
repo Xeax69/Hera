@@ -11,8 +11,8 @@ app = FastAPI(title="HERA API", version="0.1.0")
 # ---------- Chargement des modèles ----------
 BASE_DIR = Path(__file__).resolve().parent
 
-MODEL_PATH = (BASE_DIR / ".." / ".." / "ml" / "climbing" / "models" / "xgb_climbing.joblib").resolve()
-SCALER_PATH = (BASE_DIR / ".." / ".." / "ml" / "climbing" / "models" / "scaler_climbing.joblib").resolve()
+MODEL_PATH = (BASE_DIR / ".." / ".." / "src" / "models" / "xgb_climbing.joblib").resolve()
+SCALER_PATH = (BASE_DIR / ".." / ".." / "src" / "models" / "scaler_climbing.joblib").resolve()
 
 def load_joblib_model(path: Path):
     if not path.exists():
