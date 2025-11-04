@@ -1,10 +1,10 @@
 FROM python:3.11-slim
 
-WORKDIR /apps
+WORKDIR /app
 
 RUN pip install --no-cache-dir fastapi uvicorn pandas joblib pydantic
 
-COPY app/ .
+COPY apps/ .
 
 EXPOSE 8000
 
