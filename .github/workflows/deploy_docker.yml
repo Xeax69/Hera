@@ -20,7 +20,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd /opt/hera
+            cd /opt/Hera
             git pull origin api
             docker compose down
             docker compose up -d --build
